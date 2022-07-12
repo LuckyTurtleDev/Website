@@ -2,36 +2,72 @@
 <html>
 <head>
 	<title>LuckyTurtleDev    🐢</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			background-color: #263238;
+			color: white;
+			margin: 0;
+			padding: 0;
+		}
+		.center {
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		a {
+			color: white;
+		}
+		h1 {
+			text-align: center;
+			font-size: 3.8rem;
+		}
+		.avatar {
+			border-radius: 50%;
+			width: clamp(20rem, 100vh - 22rem, 627rem/16)
+		}
+		.symbol-list {
+			text-align: center;
+		}
+		.symbol-list a {
+			padding: 1.8rem;
+		}
+		.symbol-list img {
+			width: 7.5rem;
+			height: 7.5rem;
+		}
+		.bottom-links {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+		.bottom-links a {
+			display: inline-block;
+			padding: 1rem;
+		}
+	</style>
 </head>
-<style>
-	body {
-		background-color: #263238;
-		max-width: 640px;
-		margin: auto;
-	}
-	h1 {
-		color: white;
-		text-align: center;
-		font-size: 60px;
-	}
-	.avatar {
-		border-radius: 50%;
-	}
-	.image-link {
-		width: 120px;
-		height: 120px;
-	}
-</style>
 <body>
-	<img class=avatar alt="🐢" src="img/profile.png">
-	<h1>LuckyTurtleDev<h1>
-	<p>
-		<a href="https://github.com/LuckyTurtleDev">
-			<img class=image-link alt="Github" src="img/github.png">
-		</a>
-		<a href="https://crates.io/users/LuckyTurtleDev">
-			<img class=image-link alt="crates.io" src="img/crates.io.png">
-		</a>
-	</p>
+	<div class=center>
+		<img class=avatar alt="🐢" src="img/profile.png">
+		<h1>LuckyTurtleDev</h1>
+		<p class=symbol-list>
+			<a href="https://github.com/LuckyTurtleDev">
+				<img alt="Github" src="img/github.png">
+			</a>
+			<a href="https://crates.io/users/LuckyTurtleDev">
+				<img alt="crates.io" src="img/cargo.png">
+			</a>
+		</p>
+	</div>
+	<div class=bottom-links>
+		<a href="dsvgo-de.html">Datenschutz</a>
+		<a href="dsvgo-en.html">privacy</a>
+	</div>
 </body>
 </html> 
