@@ -26,11 +26,11 @@
 		}
 		h1 {
 			text-align: center;
-			font-size: 3.8rem;
+			font-size: clamp(2rem, 8vw, 3.8rem);
 		}
 		.avatar {
 			border-radius: 50%;
-			width: clamp(20rem, 100vh - 22rem, 627rem/16)
+			width: clamp(20rem, 100vh - 22rem, min(627rem/16, 90%))
 		}
 		.symbol-list {
 			text-align: center;
