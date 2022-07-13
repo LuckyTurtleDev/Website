@@ -12,7 +12,6 @@
 			background-color: #263238;
 			color: white;
 			margin: 0;
-			padding: 0;
 		}
 		.center {
 			min-height: 100vh;
@@ -31,7 +30,8 @@
 		}
 		.avatar {
 			border-radius: 50%;
-			width: clamp(min(20rem, max(90%, 7.5rem)), 100vh - 22rem, min(627rem/16, 90%))
+			width: clamp(min(20rem, max(90vw, 7.5rem)), 100vh - 22rem, min(627rem/16, 90vw));
+			margin-top: 1.5rem;
 		}
 		.symbol-list {
 			text-align: center;
