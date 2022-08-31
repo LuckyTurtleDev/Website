@@ -14,8 +14,7 @@
 			margin: 0;
 		}
 		.center {
-			min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-			min-height: calc(var(--vh, 1vh) * 100);
+			min-height: 100vh;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -32,7 +31,6 @@
 		.avatar {
 			border-radius: 50%;
 			width: clamp(min(20rem, max(90vw, 7.5rem)), 100vh - 26rem, min(627rem/16, 90vw));
-			width: clamp(min(20rem, max(90vw, 7.5rem)), var(--vh, 1vh) * 100 - 26rem, min(627rem/16, 90vw));
 			margin-top: 1.5rem;
 		}
 		.symbol-list {
@@ -47,13 +45,14 @@
 			height: 7.5rem;
 		}
 		.bottom-links {
-			position: fixed;
-			right: 0;
-			bottom: 0;
+			margin: 0;
+			margin-top: -1.5rem;
+			padding: 0rem;
+			text-align: right;
+			line-height: 1rem;
 		}
 		.bottom-links a {
-			display: inline-block;
-			padding: 1rem;
+			padding-right: 1rem;
 		}
 	</style>
 </head>
@@ -74,18 +73,5 @@
 		<a href="dsvgo-de.html">Datenschutz</a>
 		<a href="dsvgo-en.html">privacy</a>
 	</div>
-	<script>
-		(() => {
-			const get_vh = () => {
-				// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-				let vh = window.innerHeight * 0.01;
-				// Then we set the value in the --vh custom property to the root of the document
-				document.documentElement.style.setProperty('--vh', `${vh}px`);
-				// source: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-			};
-			get_vh();
-			window.addEventListener('resize', (ev) => get_vh());
-		})();
-	</script>
 </body>
 </html> 
